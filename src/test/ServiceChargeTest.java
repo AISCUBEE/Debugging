@@ -80,4 +80,15 @@ public class ServiceChargeTest {
 	        fail("Prototype.");
 	    }
 
-	  
+	    /**
+	     * Test of completed method, of class RecordServiceCTL.
+	     */
+	    @Test
+	    public void testCompleted() {
+	        System.out.println("completed");
+	        RecordServiceCTL instance = null;
+	        instance.completed();
+	        // TODO review the generated test code and remove the default call to fail.
+	        fail("Prototype.");
+	    }
+}
