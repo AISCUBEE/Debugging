@@ -67,3 +67,17 @@ public class ServiceChargeTest {
 	        // TODO review the generated test code and remove the default call to fail.
 	        fail("Prototype");
 	    }
+
+	    /**
+	     * Test of cancel method, of class RecordServiceCTL.
+	     */
+	    @Test
+	    public void testCancel() {
+	        System.out.println("cancel");
+	        RecordServiceCTL instance = null;
+	        instance.cancel();
+	        // TODO review the generated test code and remove the default call to fail.
+	        fail("Prototype.");
+	    }
+
+	  
