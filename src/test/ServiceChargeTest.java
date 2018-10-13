@@ -41,4 +41,29 @@ public class ServiceChargeTest {
 	        fail("The test case is a prototype.");
 	    }
 
-	   
+	    /**
+	     * Test of roomNumberEntered method, of class RecordServiceCTL.
+	     */
+	    @Test
+	    public void testRoomNumberEntered() {
+	        System.out.println("roomNumberEntered");
+	        int roomNumber = 0;
+	        RecordServiceCTL instance = null;
+	        instance.roomNumberEntered(roomNumber);
+	        // TODO review the generated test code and remove the default call to fail.
+	        fail("The test case is a prototype.");
+	    }
+
+	    /**
+	     * Test of serviceDetailsEntered method, of class RecordServiceCTL.
+	     */
+	    @Test
+	    public void testServiceDetailsEntered() {
+	        System.out.println("serviceDetailsEntered");
+	        ServiceType serviceType = null;
+	        double cost = 0.0;
+	        RecordServiceCTL instance = null;
+	        instance.serviceDetailsEntered(serviceType, cost);
+	        // TODO review the generated test code and remove the default call to fail.
+	        fail("Prototype");
+	    }
