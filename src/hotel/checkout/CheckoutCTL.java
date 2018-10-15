@@ -35,7 +35,18 @@ public class CheckoutCTL {
 		checkoutUI.run();
 	}
 
-	
+	public String getState() {
+        return state.name();
+    }
+
+    public void setState() {
+        state = State.ROOM;
+    }
+    
+    public double getTotal(){
+        return total;
+    }
+
 	public void roomIdEntered(int roomId) {
 		if (state != State.ROOM) {
 			String mesg = String.format("CheckoutCTL: roomIdEntered : bad state : %s", state);
