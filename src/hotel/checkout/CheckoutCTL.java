@@ -136,5 +136,17 @@ public class CheckoutCTL {
 	}
 
 
+	public void setState() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public double getTotal() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
 
 }

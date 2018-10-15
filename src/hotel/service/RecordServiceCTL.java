@@ -74,6 +74,12 @@ public class RecordServiceCTL {
 	}
 
 
+	public String getState() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 	
 
 }
