@@ -14,7 +14,6 @@ public class Hotel {
 	public Map<Long, Booking> bookingsByConfirmationNumber;
 	public Map<Integer, Booking> activeBookingsByRoomId;
 	
-	
 	public Hotel() {
 		guests = new HashMap<>();
 		roomsByType = new HashMap<>();
@@ -26,7 +25,6 @@ public class Hotel {
 		activeBookingsByRoomId = new HashMap<>();
 	}
 
-	
 	public void addRoom(RoomType roomType, int id) {
 		IOUtils.trace("Hotel: addRoom");
 		for (Map<Integer, Room> rooms : roomsByType.values()) {
@@ -39,12 +37,10 @@ public class Hotel {
 		rooms.put(id, room);
 	}
 
-	
 	public boolean isRegistered(int phoneNumber) {
 		return guests.containsKey(phoneNumber);
 	}
 
-	
 	public Guest registerGuest(String name, String address, int phoneNumber) {
 		if (guests.containsKey(phoneNumber)) {
 			throw new RuntimeException("Phone number already registered");
@@ -54,18 +50,15 @@ public class Hotel {
 		return guest;
 	}
 
-	
 	public Guest findGuestByPhoneNumber(int phoneNumber) {
 		Guest guest = guests.get(phoneNumber);
 		return guest;
 	}
 
-	
 	public Booking findActiveBookingByRoomId(int roomId) {
 		Booking booking = activeBookingsByRoomId.get(roomId);;
 		return booking;
 	}
-
 
 	public Room findAvailableRoom(RoomType selectedRoomType, Date arrivalDate, int stayLength) {
 		IOUtils.trace("Hotel: checkRoomAvailability");
@@ -79,12 +72,10 @@ public class Hotel {
 		return null;
 	}
 
-	
 	public Booking findBookingByConfirmationNumber(long confirmationNumber) {
 		return bookingsByConfirmationNumber.get(confirmationNumber);
 	}
 
-	
 	public long book(Room room, Guest guest, 
 			Date arrivalDate, int stayLength, int occupantNumber,
 			CreditCard creditCard) {
@@ -95,7 +86,6 @@ public class Hotel {
 		return confirmationNumber;		
 	}
 
-	
 	public void checkin(long confirmationNumber) {
 		Booking booking = bookingsByConfirmationNumber.get(confirmationNumber);
 		if (booking == null) {
@@ -126,6 +116,7 @@ public class Hotel {
 			throw new RuntimeException(mesg);
 		}
 		booking.checkOut();
+		activeBookingsByRoomId.remove(roomId);
 	}
 
 
