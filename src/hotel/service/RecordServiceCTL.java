@@ -72,6 +72,11 @@ public class RecordServiceCTL {
 	public void completed() {
 		recordServiceUI.displayMessage("Pay for service completed");
 	}
+	
+	public String getState() {
+	
+		return null;
+	}
 
 
 	
